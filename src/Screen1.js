@@ -2,8 +2,11 @@ import React, {Component} from 'react';
 import { 
     StyleSheet,
     View, Text, Button,
-    Animated, Easing, Image
+    Animated, Easing, Image,
+    KeyboardAvoidingView
 } from 'react-native';
+
+import FloatingLabel from './components/FloatingLabel'
 
 class Screen1 extends Component{
 
@@ -22,7 +25,8 @@ class Screen1 extends Component{
             outputRange: ['0deg','360deg']
         })
 
-        return( 
+        return(
+            <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
             <View style={styles.container}>
                 <Text>1</Text>
                 <Animated.Image
@@ -33,8 +37,14 @@ class Screen1 extends Component{
                     }} 
                     source ={require('./img/wealth-icon.png')}
                 />
+
                 <Button title="goto2" onPress={() => this.props.navigation.navigate('Screen2')} />
+
+
+                <FloatingLabel label={'a label'} />
+                
             </View>
+            </KeyboardAvoidingView>
         );
     }
 

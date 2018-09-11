@@ -39,7 +39,7 @@ class Screen2 extends Component {
                     </View>
                 </Modal>
 
-                <Button title="goto1" onPress={() => this.props.navigation.navigate('Screen1')} />
+                <Button title="goto3" onPress={() => this.props.navigation.navigate('Screen3')} />
 
                 <Button title="modal"
                     onPress={() => this.setModalVisible(!this.state.modalVisible)} />
